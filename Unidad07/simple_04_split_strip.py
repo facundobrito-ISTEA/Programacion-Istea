@@ -16,6 +16,8 @@ texto_ingresado = input("Ingrese un listado de palabras separadas por comas: ")
 
 lista_palabras = texto_ingresado.split(",")
 
+# ✅ Bien hecho: recorrés por índice para guardar el strip en la misma lista;
+# con un `for palabra in lista_palabras` eso no se podría.
 for indice in range(len(lista_palabras)):
     palabra = lista_palabras[indice].strip()
     lista_palabras[indice] = palabra

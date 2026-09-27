@@ -20,6 +20,8 @@ def buscar_elemento(lista, elemento_a_buscar):
     
     return "Elemento no encontrado"
 
+# 💡 Sugerencia (PEP 8): dejá dos líneas en blanco después de una función.
+# También hay espacios al final de la línea en blanco dentro de la función.
 numeros = [1, 2, 3, 4, 5]
 buscado = 3
 resultado = buscar_elemento(numeros, buscado)

@@ -19,6 +19,8 @@ lista_palabras = texto_ingresado.split(",")
 
 for item in lista_palabras:
     palabra = item.strip()
+    # ✅ Bien hecho: muy buena idea la versión extendida para las comas de más.
+    # 💡 Sugerencia: un string vacío es "falso", así que alcanza con `if palabra:`.
     if len(palabra) != 0:
         lista_palabras_depuradas.append(palabra)
 

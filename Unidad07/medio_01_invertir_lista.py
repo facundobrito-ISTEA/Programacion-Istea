@@ -21,6 +21,8 @@ import random
 # Funciones
 # ------------------------------------------------------------
 
+# ✅ Bien hecho: recorrer los índices con range(n - 1, -1, -1) es exacto, y
+# devolvés una lista nueva sin modificar la original.
 def invertir_lista(lista):
     lista_invertida = []
     cantidad_elementos = len(lista)
@@ -35,6 +37,8 @@ def invertir_lista(lista):
 def numeros_aleatorios(cantidad):
     lista_numeros = []
 
+    # 💡 Sugerencia: cuando la variable del for no se usa, la convención es
+    # llamarla _ (for _ in range(cantidad)) para que se note que es a propósito.
     for i in range(cantidad):
         valor = random.randint(1, 100)
         lista_numeros.append(valor)

@@ -19,6 +19,8 @@ anio = int(input("Ingresá tu año de nacimiento: "))
 clase = input("Elegí tu clase (1-Guerrero, 2-Mago, 3-Arquero, 4-Sanador): ")
 clase = int(clase)
 
+# 💡 Sugerencia: el 2026 es un "número mágico". Una constante al principio
+# (ANIO_ACTUAL = 2026) deja claro qué significa y se cambia en un solo lugar.
 edad_jugador = 2026 - anio
 tag = nombre.upper() + apellido.upper() + "_" + str(edad_jugador) + "_GG"
 
@@ -36,6 +38,7 @@ elif clase == 4:
 else:
     print("Clase desconocida")
 
+# ✅ Bien hecho: reutilizás edad_jugador en vez de volver a calcular 2026 - anio.
 nivel = edad_jugador // 5
 
 print("Nivel inicial: " + str(nivel))

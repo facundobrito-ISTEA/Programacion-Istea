@@ -17,6 +17,8 @@
 #   Elige una opcion: _
 # ============================================================
 
+# ✅ Bien hecho: función sin parámetros que solo imprime el menú, y la lógica
+# de la elección queda en el programa principal, como pedía la consigna.
 def mostrar_menu():
 
     print("=== MENU PRINCIPAL ===")

@@ -12,6 +12,8 @@
 
 lista_enteros = []
 
+# 💡 Sugerencia: como i no se usa adentro del for, la convención es
+# llamarla _ (for _ in range(5)).
 for i in range(5):
     numero = int(input("Ingrese un numero entero: "))
     lista_enteros.append(numero)

@@ -14,6 +14,8 @@
 lista_numeros = []
 lista_cuadrados = []
 
+# 💡 Sugerencia: la lista del 1 al 10 se puede armar directo con
+# list(range(1, 11)); el bucle funciona, pero no hace falta.
 for numero_generado in range(1, 11):
     lista_numeros.append(numero_generado)
 

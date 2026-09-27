@@ -19,10 +19,13 @@ def primeros_diez_pares(numeros):
     for numero in numeros:
         if numero % 2 == 0:
             pares.append(numero)
+            # ✅ Bien hecho: el break corta apenas llega a 10, sin recorrer de más.
             if len(pares) == 10:
                 break
     return pares
 
+# 💡 Sugerencia (PEP 8): dejá dos líneas en blanco después de una función.
+# También hay espacios al final de la línea en blanco dentro de la función.
 entrada01 = [1, 4, 7, 2, 9, 6, 8, 3, 10, 12, 5, 14, 16, 18, 20, 22]
 resultado = primeros_diez_pares(entrada01)
 print(f"La lista original es: {entrada01}")

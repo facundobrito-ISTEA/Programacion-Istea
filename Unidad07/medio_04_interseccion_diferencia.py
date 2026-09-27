@@ -19,6 +19,8 @@
 #   diferencia([1, 2, 3, 4], [3, 4, 5, 6])    # [1, 2]
 # ============================================================
 
+# ✅ Bien hecho: el `and elemento not in en_ambas` es justo lo que evita los
+# repetidos, y probaste con una lista que los tiene (lista1).
 def interseccion(lista1, lista2):
     en_ambas = []
 
@@ -39,6 +41,9 @@ def diferencia(lista1, lista2):
     return solo_en_lista1
 
 
+# 💡 Sugerencia: el bloque de 4 prints se repite 3 veces igual. Una función
+# mostrar_resultados(lista_a, lista_b) lo resolvería en un solo lugar.
+# Además, varias líneas pasan los 79 caracteres que recomienda PEP 8.
 lista1 = [1, 3, 3, 4, 4]
 lista2 = [3, 4, 4, 5]
 

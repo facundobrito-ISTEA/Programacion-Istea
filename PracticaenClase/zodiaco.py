@@ -17,6 +17,8 @@ print("Bienvenido al programa para conocer tu signo del zodiaco")
 dia = int(input("Por favor, ingrese su dia de nacimiento: "))
 mes = int(input("Ingrese su mes de nacimiento en numero: "))
 
+# ✅ Bien hecho: todas las fechas de corte son correctas y el if/elif anidado
+# se lee muy fácil, mes por mes.
 if mes == 12:
     if dia >= 22:
         signo = "Capricornio"
@@ -78,6 +80,10 @@ elif mes == 1:
     else:
         signo = "Capricornio"
 else:
+    # 💡 Sugerencia: el día no se valida (con día 45 o -3 igual devuelve un signo).
+    # Además, con un mes inválido el mensaje final queda
+    # "Tu signo del zodiaco es: Mes no válido". Podrías validar día y mes al
+    # principio y mostrar un mensaje de error distinto.
     signo = "Mes no válido"
 
 

@@ -19,6 +19,8 @@ def generar_rango(inicio, fin, paso):
 
     actual = inicio
 
+    # ✅ Bien hecho: contemplaste el paso negativo y el paso 0 (que con un while
+    # ingenuo sería un loop infinito), y probaste los casos no válidos.
     if paso > 0:
         while actual < fin:
             rango.append(actual)

@@ -13,6 +13,8 @@
 #   eliminar_duplicados(["ana", "luis", "ana", "pedro"])  # ["ana", "luis", "pedro"]
 # ============================================================
 
+# ✅ Bien hecho: conserva el orden de primera aparición y además lo probaste
+# con tipos mezclados (lista_02).
 def eliminar_duplicados(lista):
     lista_sin_duplicados = []
 

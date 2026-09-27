@@ -24,6 +24,9 @@ personas = int(
 propina = input(
     "Ingrese s si desea dejar la propina y n si no desea dejar la propina: ")
 
+# 💡 Sugerencia: si el usuario escribe "S" (mayúscula) o " s" (con espacio), no
+# se suma la propina. Podés normalizar la respuesta:
+# propina.strip().lower() == "s".
 if propina == "s":
     total = total * 1.10
     total = round(total, 2)
@@ -31,12 +34,17 @@ if propina == "s":
 else:
     print("El total de la cuenta es de $" + str(total))
 
+# 💡 Sugerencia: si ingresan 0 personas, el programa se corta con
+# ZeroDivisionError. Podrías validar que personas sea mayor a 0 antes de dividir.
 por_persona = total / personas
 por_persona = round(por_persona, 2)
 print("Cada persona paga: $" + str(por_persona))
 
 if por_persona < 5000:
     print("¡Qué barato, repitan!")
+# 💡 Sugerencia: como el if anterior ya descartó los < 5000, alcanza con
+# `elif por_persona <= 10000:`. Si querés dejarlo explícito, Python permite
+# `5000 <= por_persona <= 10000`.
 elif por_persona >= 5000 and por_persona <= 10000:
     print("Precio razonable.")
 else:
