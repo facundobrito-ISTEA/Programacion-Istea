@@ -17,8 +17,9 @@ def buscar_elemento(lista, elemento_a_buscar):
         elemento = lista[indice]
         if elemento == elemento_a_buscar:
             return indice
-    
+
     return "Elemento no encontrado"
+
 
 numeros = [1, 2, 3, 4, 5]
 buscado = 3

@@ -39,34 +39,27 @@ def diferencia(lista1, lista2):
     return solo_en_lista1
 
 
-lista1 = [1, 3, 3, 4, 4]
-lista2 = [3, 4, 4, 5]
+def mostrar_resultados(lista_a, lista_b):
+    print(f"Primera lista: {lista_a}")
+    print(f"Segunda lista: {lista_b}")
+    solo_en_primera = diferencia(lista_a, lista_b)
+    print(f"Elementos que están solo en la primera lista: {solo_en_primera}")
+    en_ambas = interseccion(lista_a, lista_b)
+    print(f"Elementos que están en ambas listas, sin repetidos: {en_ambas}")
+    print()
 
-print(f"Lista 1: {lista1}")
-print(f"Lista 2: {lista2}")
-print(
-    f"Elementos que están en la lista1 y no en la lista2: {diferencia(lista1, lista2)}")
-print(
-    f"Elementos que están en ambas listas, sin repetidos: {interseccion(lista1, lista2)}")
-print()
 
-lista3 = [1, 2, 3, 4]
-lista4 = [3, 4, 5, 6]
+lista_1 = [1, 3, 3, 4, 4]
+lista_2 = [3, 4, 4, 5]
 
-print(f"Lista 3: {lista3}")
-print(f"Lista 4: {lista4}")
-print(
-    f"Elementos que están en la lista3 y no en la lista4: {diferencia(lista3, lista4)}")
-print(
-    f"Elementos que están en ambas listas, sin repetidos: {interseccion(lista3, lista4)}")
-print()
+mostrar_resultados(lista_1, lista_2)
 
-lista5 = ["ana", "luis", "pedro"]
-lista6 = ["luis", "pedro", "juan"]
+lista_3 = [1, 2, 3, 4]
+lista_4 = [3, 4, 5, 6]
 
-print(f"Lista 5: {lista5}")
-print(f"Lista 6: {lista6}")
-print(
-    f"Elementos que están en la lista5 y no en la lista6: {diferencia(lista5, lista6)}")
-print(
-    f"Elementos que están en ambas listas, sin repetidos: {interseccion(lista5, lista6)}")
+mostrar_resultados(lista_3, lista_4)
+
+lista_5 = ["ana", "luis", "pedro"]
+lista_6 = ["luis", "pedro", "juan"]
+
+mostrar_resultados(lista_5, lista_6)

@@ -15,13 +15,14 @@
 
 def primeros_diez_pares(numeros):
     pares = []
-    
     for numero in numeros:
         if numero % 2 == 0:
             pares.append(numero)
             if len(pares) == 10:
                 break
+
     return pares
+
 
 entrada01 = [1, 4, 7, 2, 9, 6, 8, 3, 10, 12, 5, 14, 16, 18, 20, 22]
 resultado = primeros_diez_pares(entrada01)

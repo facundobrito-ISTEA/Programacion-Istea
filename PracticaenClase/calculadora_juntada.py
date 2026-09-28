@@ -21,9 +21,15 @@ total = float(input("Ingrese el monto total de la cuenta a dividir: "))
 personas = int(
     input("Ingrese el total de las personas que van a dividir la cuenta: "))
 
+while personas <= 0:
+    print("La cantidad de personas debe ser mayor a 0")
+    personas = int(
+        input("Ingrese el total de las personas que van a dividir la cuenta: "))
+
 propina = input(
     "Ingrese s si desea dejar la propina y n si no desea dejar la propina: ")
 
+propina = propina.strip().lower()
 if propina == "s":
     total = total * 1.10
     total = round(total, 2)
