@@ -4,7 +4,7 @@ Ejercicios resueltos de la materia Programación I, en Python.
 
 ## Organización
 
-- **PracticaEnClase/**: ejercicios de la práctica en grupos (Unidades 2 y 3).
+- **PracticaenClase/**: ejercicios de la práctica en grupos (Unidades 2 y 3).
 - **Unidad06/**: ejercicios de funciones.
 - **Unidad07/**: ejercicios de listas.
   - `simple_XX_...`: nivel simple.

@@ -6,16 +6,40 @@
 # Escribir un programa que le pida al usuario su dia y su mes
 # de nacimiento y le diga cual es su signo del zodiaco.
 #
+# Se agrega validacion: primero se pide el mes (1 a 12)
+# y despues el dia, segun los dias de ese mes (febrero
+# admite hasta el 29). Si un dato es invalido, se vuelve a pedir.
+#
 # Ejemplo de ejecucion:
-#   Ingresa tu dia de nacimiento: 15
-#   Ingresa tu mes de nacimiento: 8
+#   Ingrese su mes de nacimiento en numero: 8
+#   Por favor, ingrese su dia de nacimiento: 15
 #   Tu signo del zodiaco es: Leo
 # ============================================================
 
 print("Bienvenido al programa para conocer tu signo del zodiaco")
 
-dia = int(input("Por favor, ingrese su dia de nacimiento: "))
-mes = int(input("Ingrese su mes de nacimiento en numero: "))
+dias_por_mes = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+mes_valido = False
+
+while not mes_valido:
+    mes = int(input("Ingrese su mes de nacimiento en numero: "))
+
+    if mes <= 0 or mes > 12:
+        print("Ingresó un mes inválido")
+    else:
+        mes_valido = True
+
+dia_valido = False
+max_dias = dias_por_mes[mes - 1]
+while not dia_valido:
+    dia = int(input("Por favor, ingrese su dia de nacimiento: "))
+
+    if dia >= 1 and dia <= max_dias:
+        dia_valido = True
+    else:
+        print("Ingresó un día inválido")
+
 
 if mes == 12:
     if dia >= 22:
@@ -77,8 +101,6 @@ elif mes == 1:
         signo = "Acuario"
     else:
         signo = "Capricornio"
-else:
-    signo = "Mes no válido"
 
 
 print("Tu signo del zodiaco es: " + signo)
