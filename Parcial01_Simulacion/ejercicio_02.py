@@ -26,6 +26,8 @@ def combinar_listas(lista1, lista2):
 
     lista_combinada = []
 
+    # ✅ Bien hecho: resuelto sin + ni extend, como pedía la consigna, y sin
+    # modificar las listas originales.
     for item in lista1:
         lista_combinada.append(item)
 

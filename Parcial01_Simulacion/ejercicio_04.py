@@ -46,6 +46,7 @@ def contar_apariciones(lista, elemento):
     return cantidad
 
 
+
 def eliminar_duplicados(lista):
 
     sin_duplicados = []
@@ -58,6 +59,8 @@ def eliminar_duplicados(lista):
 
 
 def contar_todos(lista):
+    # ✅ Bien hecho: reutilizás tus dos funciones en vez de volver a escribir
+    # la lógica, y el singular/plural de "vez" está bien resuelto.
     lista_sin_duplicado = eliminar_duplicados(lista)
 
     for item in lista_sin_duplicado:
