@@ -32,6 +32,8 @@ def es_primo(numero):
     if numero <= 1:
         return False
 
+    # ✅ Bien hecho: while desde 2 hasta numero - 1, return False apenas aparece
+    # un divisor y el caso <= 1 resuelto al principio: cumple todos los requisitos.
     divisor = 2
     while divisor < numero:
         if numero % divisor == 0:

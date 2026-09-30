@@ -1,3 +1,5 @@
+# ✅ Bien hecho: módulo separado con docstrings de una línea en el formato de
+# PEP 257 (triple comilla, en una sola línea, terminando en punto).
 def km_a_millas(kilometros):
     """Convierte kilómetros a millas."""
     millas = kilometros * 0.621371
