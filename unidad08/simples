@@ -1,0 +1,8 @@
+### ✅ Ejercicio 1 — Crear una tupla
+### 
+### Creá una tupla llamada `mis_datos` con tu nombre (string), tu edad (entero) y
+### tu ciudad (string). Imprimí la tupla completa. 
+### 
+
+mis_datos =("Facundo", 44, "San Justo")
+print(mis_datos )
