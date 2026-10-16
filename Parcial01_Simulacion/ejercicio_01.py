@@ -43,6 +43,8 @@ def validar_contrasena(contrasena):
     if cantidad_caracteres >= 8:
         longitud = True
 
+    # ✅ Bien hecho: una bandera por condición y un solo recorrido del string;
+    # queda muy claro qué se verifica en cada caso.
     for caracter in contrasena:
         if caracter.isupper():
             mayuscula = True
@@ -50,9 +52,15 @@ def validar_contrasena(contrasena):
             minuscula = True
         elif caracter.isdigit():
             digito = True
+        # 💡 Sugerencia: con caracter.isspace() también detectás tabs y saltos de
+        # línea, no solo el espacio común.
         elif caracter == " ":
             contiene_espacio = True
 
+    # 💡 Sugerencia: la condición ya es True o False, así que se puede retornar
+    # directo:
+    #     return longitud and mayuscula and minuscula and digito and not contiene_espacio
+    # Igual está perfecto hacerlo como lo hiciste.
     if longitud and mayuscula and minuscula and digito and not contiene_espacio:
         contrasena_valida = True
     else:
@@ -61,6 +69,8 @@ def validar_contrasena(contrasena):
     return contrasena_valida
 
 
+# ✅ Bien hecho: además de los ejemplos de la consigna agregaste casos propios
+# y mostrás el resultado esperado al lado: así se prueba de verdad.
 print(f"Holarr32321 -> {validar_contrasena('Holarr32321')} esperado: True")
 print(f"Hola1234 333 -> {validar_contrasena('Hola1234 333')} esperado: False")
 print(f"Ho23r2    32 -> {validar_contrasena('Ho23r2    32')} esperado: False")

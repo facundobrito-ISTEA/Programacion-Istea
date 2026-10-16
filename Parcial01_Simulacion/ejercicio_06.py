@@ -53,6 +53,10 @@ Mostrá los resultados redondeados a 2 decimales (por ejemplo, `f"{valor:.2f}"`)
 import conversiones
 
 
+# ✅ Bien hecho: validar con replace(".", "", 1) + isdigit() evita que float()
+# rompa el programa con texto, y de paso descarta negativos. Muy buena idea.
+# 💡 Sugerencia: si el usuario escribe " 10" (con espacio) lo rechaza; con
+# texto.strip() al principio lo aceptarías.
 def es_numero_positivo(texto):
     nuevo_valor = texto.replace(".", "", 1)
     if not nuevo_valor.isdigit():
@@ -78,6 +82,8 @@ while opcion != "3":
     if opcion == "1":
         kilometros = input("Ingrese los kilómetros: ")
         if es_numero_positivo(kilometros):
+            # ✅ Bien hecho: guardar el texto original hace que se muestre
+            # "10 km" y no "10.0 km", igual que en el ejemplo de la consigna.
             valor_km = kilometros
             kilometros = float(kilometros)
             millas = conversiones.km_a_millas(kilometros)
@@ -100,3 +106,6 @@ while opcion != "3":
         print("¡Hasta luego!")
     else:
         print("Opción no válida. Intente nuevamente.")
+
+
+# Perfecto todos los ejercicios!

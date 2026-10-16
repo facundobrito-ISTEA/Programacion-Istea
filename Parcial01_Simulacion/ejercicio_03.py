@@ -29,12 +29,15 @@ def eliminar_duplicados(lista):
     sin_duplicados = []
 
     for item in lista:
+        # ✅ Bien hecho: el `not in` sobre la lista nueva mantiene el orden de
+        # primera aparición sin usar set().
         if item not in sin_duplicados:
             sin_duplicados.append(item)
 
     return sin_duplicados
 
 
+# todo perfecto!
 lista1 = [1, 2, 3, 1, 2, 4]
 lista_final = eliminar_duplicados(lista1)
 print(f"La lista original era: {lista1}")
