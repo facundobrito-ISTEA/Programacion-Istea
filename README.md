@@ -10,6 +10,10 @@ Ejercicios resueltos de la materia Programación I, en Python.
   - `simple_XX_...`: nivel simple.
   - `medio_XX_...`: nivel medio.
 - **Parcial01_Simulacion/**: simulación del primer parcial (ejercicios 1 a 6).
+- **Parcial/**: primer parcial, con el ejercicio 4 rehecho (ahorcado, `ejercicio_04.py` y módulo `juego.py`).
+- **Unidad08/**: ejercicios de tuplas y diccionarios.
+  * `Simples.py`: ejercicios simples (varios mini ejercicios en un solo archivo).
+  * `Avanzados-ejXX.py`: ejercicios avanzados.
 
 La numeración de cada archivo sigue la de los enunciados de la cátedra,
 y cada archivo tiene el enunciado al principio como comentario.
